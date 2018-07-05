@@ -1,0 +1,33 @@
+{
+    "name": "thegrilledprawn",
+    "version": "0.0.1",
+    "description": "Interview task for FoolProof",
+    "dependencies": {
+        "imagesloaded": "^4.1.4",
+        "masonry-layout": "^4.2.1",
+        "packery": "^2.1.1"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^3.1.0",
+        "gulp-imagemin": "^2.4.0",
+        "gulp-jsdoc3": "^1.0.1",
+        "gulp-jshint": "^2.1.0",
+        "gulp-livereload": "^3.8.1",
+        "gulp-plumber": "^1.1.0",
+        "gulp-sass": "^2.2.0",
+        "gulp-typedoc": "^2.2.0",
+        "gulp-uglify": "^1.5.3",
+        "imagemin-pngquant": "^4.2.2",
+        "jpegtran-bin": "^3.2.0",
+        "optipng-bin": "^4.0.0",
+        "pngquant-bin": "^4.0.0"
+    },
+    "author": "Joel Pierre-Powell",
+    "license": "ISC",
+    "repository": {},
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
+}
