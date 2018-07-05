@@ -3,38 +3,18 @@
 // Core Styles
 @import "core/global";
 @import "core/typography";
-
-#page {
-  // Shared Styles
-  @import "pages/shared/header";
-  @import "pages/shared/nav";
-  @import "pages/shared/mobile-nav";
-  @import "pages/shared/main";
-  @import "pages/shared/footer";
-
-  // Modifier Styles
-  @import "pages/modifiers/cards/post";
-  @import "pages/modifiers/forms";
-  @import "pages/modifiers/buttons";
-  @import "pages/modifiers/icons";
-  @import "pages/modifiers/lists";
-
-  // Module Styles
-  @import "pages/modules/parallax";
-  @import "pages/modules/breadcrumbs";
-  @import "pages/modules/service.module";
-  @import "pages/modules/process.module";
-  @import "pages/modules/cta.module";
-}
-
+// Shared Styles
+@import "shared/header";
+@import "shared/nav";
+@import "shared/mobile-nav";
+@import "shared/main";
+@import "shared/footer";
+// Modifier Styles
+@import "modifiers/cards/recipe";
+@import "modifiers/forms";
+@import "modifiers/buttons";
+// Module Styles
 // Helper Styles
 @import "helpers/utils";
-@import "helpers/animations";
-@import "helpers/animations";
-@import "helpers/icons";
-@import "helpers/loading";
-@import "helpers/modals/modals";
-@import "helpers/modals/user";
-
 // Override Styles
 @import "core/overrides";
