@@ -6,6 +6,10 @@
 *.PDF
 *.pdf
 
+## Remove IDEA files ##
+.idea
+*.idea
+
 ### Bower ###
 bower_components
 .bower-cache
