@@ -1,0 +1,38 @@
+// Fonts
+$fontDefault: "Helvetica", Helvetica Neue, Arial, sans-serif;
+
+// Colors
+$white: white;
+$black: black;
+//$lightGray: #f7f7f7;
+$lightGray: #f4f7f6;
+$lightGray2: rgb(175, 175, 175);
+$midGray: #9f9f9f;
+$darkGray: #616161;
+$charcoal: #22252b;
+
+$bsBlue: #007bff;
+$bsDarkBlue: #0069d9;
+$bsRed: #dc3545;
+$bsDarkRed: #c82333;
+$bsYellow: #ffc107;
+$bsDarkYellow: #e0a800;
+$bsGreen: #28a745;
+$bsDarkGreen: #218838;
+$bsInfo: #17a2b8;
+$bsDarkInfo: #138496;
+$bsDefault: #868e96;
+$bsDarkDefault: #727b84;
+
+// Utils
+$borderWidth: 2px;
+$borderRadius: 3px;
+$borderStyle: solid;
+
+$transition: .4s;
+$transitionAll: $transition all;
+
+$center: translate(-50%, -50%);
+$centerY: translateY(-50%);
+$centerX: translateX(-50%);
+

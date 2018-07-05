@@ -1,0 +1,60 @@
+#js-loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, .2);
+  z-index: 9999999999;
+
+  .loading-body {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 40%;
+    transform: $center;
+    text-align: center;
+
+    .dual-ring {
+      position: relative;
+      margin: auto;
+    }
+    .dual-ring div {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      border: 5px solid #000;
+      border-color: $bsBlue transparent $bsBlue transparent;
+      animation: dual-ring .8s linear infinite;
+    }
+    .dual-ring {
+      width: 100px !important;
+      height: 100px !important;
+      transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+    }
+  }
+}
+
+@keyframes dual-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dual-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+

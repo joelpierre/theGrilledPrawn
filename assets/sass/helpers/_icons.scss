@@ -1,0 +1,75 @@
+.icon-svg {
+  display: block;
+  cursor: pointer;
+
+  svg {
+    width: 80px;
+  }
+
+  .icon-web {
+    stroke: $darkGray;
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    transition: 2s all;
+    stroke-miterlimit: 10;
+  }
+
+  .icon-design {
+    stroke: $darkGray;
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    transition: 2s all;
+    stroke-miterlimit: 10;
+    fill: none;
+  }
+
+  .icon-seo {
+    stroke: $darkGray;
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    transition: 3s all;
+  }
+
+  .icon-email {
+    stroke: $darkGray;
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    transition: 2s all;
+    stroke-miterlimit: 10;
+  }
+
+  .icon-hosting {
+    stroke: $darkGray;
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    transition: 2s all;
+    stroke-miterlimit: 10;
+  }
+
+  &:hover {
+    .icon-web {
+      animation: draw 5s linear alternate infinite;
+    }
+
+    .icon-design {
+      animation: draw 7s linear alternate infinite;
+    }
+
+    .icon-seo {
+      animation: draw 5s linear alternate infinite;
+    }
+
+    .icon-email {
+      animation: draw 5s linear alternate infinite;
+    }
+
+    .icon-hosting {
+      animation: draw 10s linear alternate infinite;
+    }
+  }
+}

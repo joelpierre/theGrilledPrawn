@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.ie8-hide {
+  display: block;
+}
+
+.ie8 {
+  display: none;
+}
+
+body {
+  font-family: $fontDefault;
+  margin: 0 !important;
+  position: relative;
+  font-size: 16px;
+  background-color: white;
+
+  &.active {
+    overflow: hidden;
+  }
+}
+
+#js-push-wrapper {
+  transition: .4s all;
+  overflow: hidden;
+  position: relative;
+  background-color: $lightGray;
+
+  &.active {
+    transform: translate3d(35%, -4%, 0) scale3d(0.85, 0.85, 1);
+    box-shadow: -5px 5px 10px $darkGray;
+  }
+}
+
+::selection {
+  background: $black;
+  color: $white;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: $black;
+  color: $white;
+  text-shadow: none;
+}

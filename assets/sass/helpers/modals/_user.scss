@@ -1,0 +1,124 @@
+// -------------------------------
+// ------ NEW USER MODAL --------
+// -------------------------------
+
+.new-user-modal {
+
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  .new-user-modal-header {
+
+  }
+
+
+}
+
+// -------------------------------
+// ------ SHOW USER MODAL --------
+// -------------------------------
+
+.show-user-modal {
+  position: relative;
+
+  .modal-content {
+    min-height: 210px;
+    padding: 20px 0;
+  }
+
+  .show-user-modal-header {
+    width: 40%;
+    height: 100%;
+    position: relative;
+    float: left;
+
+    @media (max-width: 786px) {
+      text-align: center;
+      width: 100%;
+    }
+
+
+    .show-user-modal-img {
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      border-radius: 50%;
+      background-color: $lightGray;
+      padding: 5px;
+
+      @media (max-width: 786px) {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+      }
+
+      @media (min-width: 767px) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @media (min-width: 992px) {
+        width: 180px;
+        height: 180px;
+      }
+
+      @media (min-width: 1200px) {
+        width: 180px;
+        height: 180px;
+      }
+
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .show-user-modal-body {
+    width: 60%;
+    position: relative;
+    float: left;
+    padding: 10px 0;
+
+    @media (max-width: 786px) {
+      width: 100%;
+    }
+
+    h4 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: .9rem;
+    }
+
+    .list-inline {
+      margin-top: 10px;
+      margin-bottom: 0;
+
+      .btn-xs {
+        padding: 4px 10px !important;
+        font-size: .8rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// -------------------------------
+// ------ OVERRIDES USER MODAL ---
+// -------------------------------
+
+.user-modal-close {
+  position: absolute;
+  top: 7px;
+  right: 13px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1;
+  z-index: 99999;
+}

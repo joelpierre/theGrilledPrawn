@@ -1,0 +1,62 @@
+// Start of Overrides
+img {
+  border: 0;
+  margin: auto;
+  padding: 0;
+  vertical-align: middle;
+}
+
+a, button {
+  cursor: pointer !important;
+}
+
+.container-fluid {
+  //max-width: 1600px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  & > .row {
+  }
+}
+
+.medium {
+  font-size: 95%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $darkGray;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.mce-panel {
+  border-color: $midGray !important;
+  box-shadow: none !important;
+  background-color: white;
+}
+
+.select2-results__option[aria-selected=true] {
+  background-color: $midGray !important;
+  color: black !important;
+}
+
+@media (max-width: 786px) {
+}
+
+@media (min-width: 786px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
