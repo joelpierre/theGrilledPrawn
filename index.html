@@ -25,7 +25,7 @@
     <![endif]-->
 
     <!--[if IE 8]>
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/ie8.css">
+    <link rel="stylesheet" href="./dist/css/ie8.css">
     <![endif]-->
 
     <!--[if lt IE 9]>
@@ -39,31 +39,62 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <link rel="stylesheet" href="./dist/css/fontawesome/fa-brands.css">
+    <link rel="stylesheet" href="./dist/css/fontawesome/fa-light.css">
+    <link rel="stylesheet" href="./dist/css/fontawesome/fa-regular.css">
+    <link rel="stylesheet" href="./dist/css/fontawesome/fa-solid.css">
+    <link rel="stylesheet" href="./dist/css/fontawesome/fa-svg-with-js.css">
     <link rel="stylesheet" href="./dist/css/fontawesome/fontawesome.css">
     <link rel="stylesheet" href="./dist/css/styles.css">
 </head>
 <body>
 
 <section class="ie8">
-    <h1 class="nmtop">Oops!</h1>
-    <p>It looks like you are using an outdated version of Internet Explorer.</p>
-    <p>This website is best viewed using IE9 and later. Please update your browser to continue and
-        experience the site and content at its very best.</p>
-    <p>Alternatively open the site in a recommended modern browser such as Firefox or Chrome.</p>
+    <div class="container">
+        <div class="row text-center align-items-stretch">
+            <div class="col">
+                <h1 class="nmtop">Oops!</h1>
+                <p>It looks like you are using an outdated version of Internet Explorer.</p>
+                <p>This website is best viewed using IE9 and later. Please update your browser to continue and
+                    experience the site and content at its very best.</p>
+                <p>Alternatively open the site in a recommended modern browser such as Firefox or Chrome.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <header id="js-header" class="ie8-hide header">
     <nav role="navigation">
-        This will be the header &amp; Navigation.
+        <div class="container">
+            <div class="row">
+                <div class="navbar-logo col-4">
+                    Image here
+                </div>
+
+                <div class="navbar-menu col">
+                    Navbar Menu here
+                </div>
+            </div>
+        </div>
     </nav>
 </header>
 
 <main id="js-main" class="main ie8-hide" role="main">
-    This will be the main body
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
 </main>
 
 <footer id="js-footer" class="ie8-hide footer">
-    This will be the footer
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                This is the footer
+            </div>
+        </div>
+    </div>
 </footer>
 
 <script src="./dist/js/main.js"></script>

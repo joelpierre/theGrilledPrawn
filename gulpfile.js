@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
+    livereload = require('gulp-livereload'),
     imageMin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     plumber = require('gulp-plumber');
@@ -21,7 +22,7 @@ gulp.task('sass', function() {
     outputStyle: 'compressed',
   })).pipe(plumber.stop()).pipe(prefix({
     browsers: ['last 2 versions'],
-  })).pipe(gulp.dest('dist/css/'));
+  })).pipe(gulp.dest('dist/css/')).pipe(livereload());
 });
 
 // Image Task - Compress Images
@@ -36,6 +37,9 @@ gulp.task('image', function() {
 // Watch Task -
 
 gulp.task('watch', function() {
+
+  livereload.listen();
+
   gulp.watch('assets/js/*.js', ['scripts']);
   gulp.watch('assets/img/**/*', ['image']);
   gulp.watch('assets/sass/**/*.scss', ['sass']);
