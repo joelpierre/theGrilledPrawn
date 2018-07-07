@@ -1,15 +1,55 @@
 footer {
   position: relative;
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 0 100px;
+  font-size: .875rem;
 
   h4 {
     font-size: 1.125em;
     font-weight: 500;
+    margin-bottom: 1.2rem;
   }
 
   p {
+    font-size: .875rem;
     font-weight: 300;
-    font-size: 1rem;
+
+    &.copyright {
+      font-size: 1.1rem;
+    }
+  }
+
+  a {
+    font-weight: bold;
+  }
+
+  .col {
+    @media (max-width: 786px) {
+    }
+
+    @media (min-width: 786px) {
+    }
+
+    @media (min-width: 992px) {
+    }
+
+    @media (min-width: 1200px) {
+      padding: 0 1rem;
+    }
+  }
+
+  .copyright-container {
+    @media (max-width: 786px) {
+    }
+
+    @media (min-width: 786px) {
+    }
+
+    @media (min-width: 992px) {
+    }
+
+    @media (min-width: 1200px) {
+      padding-left: 110px;
+    }
   }
 }

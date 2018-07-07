@@ -1,20 +1,36 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     livereload = require('gulp-livereload'),
     imageMin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    plumber = require('gulp-plumber');
+    plumber = require('gulp-plumber'),
+    babel = require('gulp-babel'),
+    sourcemaps = require('gulp-sourcemaps'),
+    concat = require('gulp-concat');
 
 // Scripts Task -
-gulp.task('scripts', function() {
-  gulp.src('assets/js/*.js').
-      pipe(plumber()).
-      pipe(uglify()).
-      pipe(plumber.stop()).
-      pipe(gulp.dest('dist/js'));
-});
+// gulp.task('scripts', function() {
+//   gulp.src('assets/js/*.js').
+//       pipe(plumber()).
+//       pipe(uglify()).
+//       pipe(plumber.stop()).
+//       pipe(gulp.dest('dist/js'));
+// });
+
+gulp.task('scripts', () =>
+    gulp.src('assets/js/*.js').
+        pipe(plumber()).
+        pipe(sourcemaps.init()).
+        pipe(babel({
+          presets: ['env'],
+        })).
+        pipe(concat('all.js')).
+        pipe(sourcemaps.write('.')).
+        pipe(plumber.stop()).
+        pipe(gulp.dest('dist/js')),
+);
 
 // Compress SCSS Task -
 gulp.task('sass', function() {
