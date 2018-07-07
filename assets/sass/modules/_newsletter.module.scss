@@ -1,0 +1,23 @@
+.newsletter-module {
+  color: white;
+  background-color: $red;
+
+  .newsletter-signup-form {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+
+    label {
+      margin-bottom: 10px;
+      display: flex;
+      font-weight: 500;
+    }
+
+    .btn-block {
+      min-height: 45px;
+      max-height: 45px;
+      padding-top: 10px;
+    }
+  }
+
+}

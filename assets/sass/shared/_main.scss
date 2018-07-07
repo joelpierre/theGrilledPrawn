@@ -1,6 +1,11 @@
 main {
-  background-color: white;
+  background-color: $lightGray;
   position: relative;
   z-index: 3;
   transition: .4s all;
+  color: $darkGray;
+
+  section {
+    padding: 50px 0;
+  }
 }

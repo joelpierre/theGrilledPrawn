@@ -1,27 +1,16 @@
 /* Button Colors --- This section will change depending on the site color scheme */
 .btn-white {
-  background-color: transparent;
-  color: $white;
-  font-weight: bold;
+  background-color: white;
+  color: $darkGray;
+  font-weight: 500;
   overflow: hidden;
   z-index: 1;
   position: relative;
   border: 2px white solid;
 
-  &:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    background-color: $white;
-    z-index: -1;
-    transition: .4s ease-in-out;
-  }
-
   &:hover, &:active, &:focus {
-    color: $darkGray;
+    background-color: transparent;
+    color: white;
 
     &:after {
       left: 0;
@@ -29,30 +18,18 @@
   }
 }
 
-.btn-white-alt {
-  background-color: $white;
-  color: $darkGray;
-  font-weight: bold;
+.btn-outline-white {
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
   overflow: hidden;
   z-index: 1;
   position: relative;
   border: 2px white solid;
 
-  &:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    background-color: transparent;
-    z-index: -1;
-    transition: .4s ease-in-out;
-  }
-
   &:hover, &:active, &:focus {
-    color: $white !important;
-    background-color: transparent;
+    background-color: white;
+    color: $darkGray;
 
     &:after {
       left: 0;
@@ -62,8 +39,18 @@
 
 /* Button Sizes --- Adjust if Needed */
 .btn {
+  display: inline-flex;
+  position: relative;
   border-radius: $borderRadius !important;
   transition: $transitionAll;
+  font-size: 1rem;
+  min-height: 34px;
+  text-align: center;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
 }
 
 a.btn, button.btn {
@@ -72,20 +59,17 @@ a.btn, button.btn {
 
 .btn-xs {
   padding: 4px 10px !important;
-  font-size: .8rem;
 }
 
 .btn-sm {
   padding: 5px 15px !important;
-  font-size: .9rem;
 }
 
 .btn-md {
-  padding: 5px 20px !important;
-  font-size: 1rem;
+  padding: 9px 20px !important;
 }
 
 .btn-lg {
   padding: 8px 25px !important;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }

@@ -1,0 +1,11 @@
+.form-control {
+  display: flex;
+  min-height: 45px;
+  appearance: none;
+  background-color: white;
+  border: none;
+  border-radius: $borderRadius;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1.125rem;
+}
