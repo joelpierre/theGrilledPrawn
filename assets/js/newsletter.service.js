@@ -4,8 +4,8 @@ export function addRemoveBtn(elm) {
   elm.classList.remove('btn-outline-white');
   elm.classList.remove('btn-add-user-row');
   elm.innerHTML = `
+    <i class="material-icons mr-5">delete</i>
     Remove
-    <i class="material-icons">delete</i>
     `;
 }
 
