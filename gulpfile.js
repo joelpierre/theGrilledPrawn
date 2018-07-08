@@ -1,15 +1,10 @@
 const gulp = require('gulp'),
     prefix = require('gulp-autoprefixer'),
-    uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     livereload = require('gulp-livereload'),
     imageMin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    plumber = require('gulp-plumber'),
-    babel = require('gulp-babel'),
-    sourcemaps = require('gulp-sourcemaps'),
-    webpack = require('webpack-stream'),
-    concat = require('gulp-concat');
+    plumber = require('gulp-plumber');
 
 // Compress SCSS Task -
 gulp.task('sass', function() {
@@ -30,7 +25,6 @@ gulp.task('image', function() {
 });
 
 // Watch Task -
-
 gulp.task('watch', function() {
 
   livereload.listen();
@@ -38,7 +32,6 @@ gulp.task('watch', function() {
   gulp.watch('assets/js/*.js', ['scripts']);
   gulp.watch('assets/img/**/*', ['image']);
   gulp.watch('assets/sass/**/*.scss', ['sass']);
-  // gulp.watch('dist/js/all.js', ['webpack']);
 });
 
 gulp.task('default', ['scripts', 'sass', 'image', 'watch']);
