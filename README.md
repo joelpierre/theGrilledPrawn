@@ -10,10 +10,8 @@ The following are complete:
 * Add and Remove users to signup form.
 
 ________
-________
 
 All non compiled files can be found in the 'assets' folder. This includes the SCSS files for styling and ES6+ JS files, which are compiled into main.bundle.js
-________
 ________
 
 **** Should you have trouble loading the index file then you can run ```npm install``` and then ```npm run start```. This will run webpack and also open up a localhost port for you to view the page.
