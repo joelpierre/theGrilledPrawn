@@ -18,11 +18,8 @@ I also added some extras:
 * Mobile navigation
 * Open and Close filter options
 * JS object created for recipes to resemble an API call
-* Tested on all major browsers.
+* Tested on all major browsers (latest 2 versions, Safari | Firefox | Chrome) - If I owned a windows comp, then I would have tested it in Microsoft Edge :-p.
 
-```
-TODO:: Fix filter select styling issues on Firefox.
-```
 ________
 
 All non compiled files can be found in the 'assets' folder. This includes the SCSS files for styling and ES6+ JS files, which are compiled into main.bundle.js
