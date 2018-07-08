@@ -1,5 +1,5 @@
 ## Foolproof Task
-No need to run ```npm install``` as everything has been compiled. 
+No need to run ```npm install``` as everything has been compiled. Please make sure you have an internet connection to load the webfonts form the google webfont server.
 
 The following are complete:
 
@@ -8,7 +8,21 @@ The following are complete:
 * ES6+ syntax used for all script files.
 * Page is fully responsive (Desktop, Small Desktop/Tablet Landscape, Tablet Portrait and Mobile).
 * Add and Remove users to signup form.
+* Roboto used as font link. (From google webfonts).
+* Material Design Icons used as font link. (From google webfonts).
 
+________
+
+
+I also added some extras:
+* Mobile navigation
+* Open and Close filter options
+* JS object created for recipes to resemble an API call
+* Tested on all major browsers.
+
+```
+TODO:: Fix filter select styling issues on Firefox.
+```
 ________
 
 All non compiled files can be found in the 'assets' folder. This includes the SCSS files for styling and ES6+ JS files, which are compiled into main.bundle.js
