@@ -13,11 +13,28 @@
       font-weight: 500;
     }
 
+    .form-control {
+      width: 100%;
+    }
+
     .btn-block {
       min-height: 45px;
       max-height: 45px;
-      padding-top: 10px;
+      padding: 14px;
     }
   }
 
+}
+
+.signup-row-container {
+  .signup-user-row {
+
+    &:first-child {
+
+      hr {
+        display: none !important;
+      }
+
+    }
+  }
 }

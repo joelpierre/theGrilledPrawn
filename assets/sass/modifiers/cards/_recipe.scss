@@ -1,3 +1,49 @@
 .recipe-card {
+  background-color: white;
+  margin-bottom: 30px;
 
+  .recipe-card-header {
+    padding: 20px .8rem ;
+
+    .recipe-date {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: .8rem;
+    }
+
+    .recipe-nationality {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: .8rem;
+    }
+  }
+
+  .recipe-card-body {
+    height: 100px;
+    position: relative;
+    padding: 0px .8rem 20px;
+
+    h3 {
+      font-weight: 300;
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .recipe-card-footer {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: $center;
+      width: 120%;
+      height: auto;
+      //width: auto;
+      //height: 150%;
+    }
+  }
 }

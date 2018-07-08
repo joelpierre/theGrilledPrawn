@@ -8,29 +8,8 @@ const gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     babel = require('gulp-babel'),
     sourcemaps = require('gulp-sourcemaps'),
+    webpack = require('webpack-stream'),
     concat = require('gulp-concat');
-
-// Scripts Task -
-// gulp.task('scripts', function() {
-//   gulp.src('assets/js/*.js').
-//       pipe(plumber()).
-//       pipe(uglify()).
-//       pipe(plumber.stop()).
-//       pipe(gulp.dest('dist/js'));
-// });
-
-gulp.task('scripts', () =>
-    gulp.src('assets/js/*.js').
-        pipe(plumber()).
-        pipe(sourcemaps.init()).
-        pipe(babel({
-          presets: ['env'],
-        })).
-        pipe(concat('all.js')).
-        pipe(sourcemaps.write('.')).
-        pipe(plumber.stop()).
-        pipe(gulp.dest('dist/js')),
-);
 
 // Compress SCSS Task -
 gulp.task('sass', function() {
@@ -59,6 +38,7 @@ gulp.task('watch', function() {
   gulp.watch('assets/js/*.js', ['scripts']);
   gulp.watch('assets/img/**/*', ['image']);
   gulp.watch('assets/sass/**/*.scss', ['sass']);
+  // gulp.watch('dist/js/all.js', ['webpack']);
 });
 
 gulp.task('default', ['scripts', 'sass', 'image', 'watch']);

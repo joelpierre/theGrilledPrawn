@@ -1,0 +1,184 @@
+.filter-item {
+  background-color: $lightGray;
+  overflow: hidden;
+  display: inline-block;
+
+  & > .form-group {
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0 1rem 10px;
+    background-color: $lightGray;
+    min-height: 46px;
+    min-width: 270px;
+    text-align: left;
+
+    select {
+      min-width: 200px;
+      margin-left: 10px;
+      border: 1px $darkGray solid;
+    }
+  }
+
+  &.active {
+    background-color: $red;
+
+    .filter-link {
+      color: white;
+    }
+  }
+}
+
+.filter-toggle {
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  padding: 20px 1rem 20px;
+  border-radius: 3px 3px 0 0;
+
+  .material-icons {
+    margin-top: -2px;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &.active {
+    background-color: $red;
+    color: white;
+  }
+}
+
+.sort-by-container {
+  padding: 0;
+
+  @media (max-width: 786px) {
+    display: none;
+  }
+
+  @media (min-width: 786px) {
+    display: block;
+  }
+
+  @media (min-width: 992px) {
+    display: block;
+  }
+
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.search-btn-container {
+  @media (max-width: 786px) {
+    display: none;
+  }
+
+  @media (min-width: 786px) {
+    display: none;
+  }
+
+  @media (min-width: 992px) {
+    display: block;
+  }
+
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.filter-options {
+  width: 100%;
+  background-color: $red;
+  display: none;
+  position: relative;
+  margin-top: -3px;
+  margin-bottom: 30px;
+  border-radius: 0 3px 3px 3px;
+  padding: 1rem;
+  color: white;
+
+  &.active {
+    display: block;
+  }
+
+  ul.list-unstyled {
+    li {
+      padding: 5px 0;
+      font-size: 1.125rem;
+      position: relative;
+
+      label {
+        position: relative;
+        width: 100%;
+        padding-left: 40px;
+
+        input[type=checkbox] {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+
+          &:checked {
+            & ~ .checkmark:after {
+              display: block;
+              left: 9px;
+              top: 5px;
+              width: 5px;
+              height: 10px;
+              border: solid $darkGray;
+              border-width: 0 3px 3px 0;
+              transform: rotate(45deg);
+            }
+          }
+        }
+
+        .checkmark {
+          position: absolute;
+          top: -3px;
+          left: 0;
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+          background-color: white;
+          cursor: pointer;
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+        }
+
+        &:hover {
+          input[type=checkbox] {
+            & ~ .checkmark {
+              background-color: $lightGray;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .filter-food-type {
+    @media (max-width: 786px) {
+      border-right: none;
+    }
+
+    @media (min-width: 786px) {
+      border-right: none;
+    }
+
+    @media (min-width: 992px) {
+    border-right: 1px solid $white;
+    }
+
+    @media (min-width: 1200px) {
+    border-right: 1px solid $white;
+    }
+  }
+}

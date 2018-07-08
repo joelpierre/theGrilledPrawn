@@ -60,31 +60,91 @@
     </div>
 </section>
 
-<header id="js-header" class="ie8-hide header">
+<header id="header" class="ie8-hide header">
     <nav role="navigation">
         <div class="container">
             <div class="row">
-                <div class="navbar-logo col-4">
-                    Image here
+                <div class="navbar-brand">
+                    <a href="/">
+                        <img src="./dist/media/images/logo.png" class="navbar-logo" alt="The Grilled Prawn logo"
+                             width="100">
+                        <span>The Grilled Prawn</span>
+                    </a>
                 </div>
 
-                <div class="navbar-menu col">
-                    Navbar Menu here
+                <div id="js-navbar-toggle" class="navbar-toggle" onclick="">
+                    <div class="navbar-toggle-line"></div>
+                    <div class="navbar-toggle-line"></div>
+                    <div class="navbar-toggle-line"></div>
                 </div>
+
+                <ul class="navbar-menu">
+                    <li class="navbar-item active">
+                        <a href="#" class="navbar-link">
+                            Recipes
+                        </a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">
+                            Drinks
+                        </a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">
+                            Decorations
+                        </a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">
+                            About the Grilled Prawn
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 </header>
 
-<main id="js-main" class="main ie8-hide" role="main">
+<nav id="js-mobile-nav" class="mobile-nav">
+    <ul class="navbar-menu">
+        <li class="navbar-item active">
+            <a href="#" class="navbar-link">
+                Recipes
+            </a>
+        </li>
+
+        <li class="navbar-item">
+            <a href="#" class="navbar-link">
+                Drinks
+            </a>
+        </li>
+
+        <li class="navbar-item">
+            <a href="#" class="navbar-link">
+                Decorations
+            </a>
+        </li>
+
+        <li class="navbar-item">
+            <a href="#" class="navbar-link">
+                About the Grilled Prawn
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<main id="main" class="main ie8-hide" role="main">
 
     <section class="hero-module">
         <div class="container-fluid h-100">
             <div class="row h-100 align-items-stretch">
-                <div class="col bg-home-hero">
+                <div class="col-md bg-home-hero">
 
                 </div>
-                <div class="col-4 bg-red hero-content">
+                <div class="col-md-4 hero-content">
                     <h5 class="text-white text-uppercase">
                         Latest Recipe
                     </h5>
@@ -115,7 +175,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>
+                    <h1 class="mb-20">
                         Our Recipes
                     </h1>
                 </div>
@@ -124,9 +184,203 @@
             <div class="w-100"></div>
 
             <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <a class="filter-toggle active n-user-select" id="js-filter-toggle">
+                        <div class="filter-link">
+                            Filter recipes by
+
+                            <i class="material-icons float-right mi-add">
+                                add
+                            </i>
+
+                            <i class="material-icons float-right mi-remove active">
+                                remove
+                            </i>
+                            <span class="clearfix"></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4 col-sm-6 sort-by-container">
+                    <div class="filter-item">
+                        <div class="form-group">
+                            <label for="recipe-sort" class="d-inline-flex">
+                                Sort by:
+                            </label>
+                            <div class="select-wrap d-inline-flex">
+                                <select name="recipe-sort" id="recipe-sort" class="form-control nmbottom">
+                                    <option value="newest_first">Newest First</option>
+                                    <option value="oldest_first">Oldest First</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-right pt-20 search-btn-container">
+                    <a id="js-search-toggle"
+                       class="btn btn-link text-dark-gray n-user-select d-inline-flex float-right">
+                        <i class="material-icons mr-5">
+                            search
+                        </i>
+
+                        Search recipes
+                    </a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+            <div id="js-filter-options" class="filter-options active">
+                <div class="row align-items-stretch">
+                    <div class="col-md-3 filter-food-type mb-20">
+
+                        <h5>
+                            Food Type:
+                        </h5>
+
+                        <div class="form-group">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <label>
+                                        <input type="checkbox" name="food_type[]"> Appetiser
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" name="food_type[]"> Mains
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" name="food_type[]"> Desserts
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" name="food_type[]"> Special Occasions
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+
+                        <h5>
+                            Nationality:
+                        </h5>
+
+                        <div class="row align-items-stretch">
+
+                            <div class="col-sm-6 col-md-4 col-6">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="nationality[]"> Italian
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="nationality[]"> French
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="nationality[]"> Spanish
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="nationality[]"> Peruvian
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-sm-6 col-md-4 col-6">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="nationality[]"> Chinese
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="nationality[]"> Indian
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="nationality[]"> Thai
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="nationality[]"> Norwegian
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-sm-6 col-md-4 col-6">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="nationality[]"> Polish
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="nationality[]"> Danish
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="nationality[]"> Belgian
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="checkbox" name="nationality[]"> Persian
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100 mb-20"></div>
+
+            <div id="js-recipe-container" class="row recipe-container align-items-stretch">
+                <!--Content will be dynamically loaded from JS file-->
+            </div>
+
+            <div class="w-100"></div>
+
+            <div class="row">
                 <div class="col">
                     <p>
-                        <a href="#">
+                        <a href="#header">
                             Return to top
                             <i class="material-icons">
                                 keyboard_arrow_up
@@ -141,7 +395,7 @@
     <section class="newsletter-module">
         <div class="container">
             <div class="row">
-                <div class="col-5">
+                <div class="col-lg-5">
                     <h1>
                         Spread the word!
                     </h1>
@@ -155,74 +409,76 @@
             <div class="w-100"></div>
 
             <form id="js-newsletter-signup-form" class="newsletter-signup-form">
-                <div class="row">
-                    <div class="col">
+                <div id="js-signup-row-container" class="signup-row-container">
+                    <div class="row signup-user-row newsletter-row-1">
+                        <div class="col-lg col-sm-6">
 
-                        <div class="form-group">
-                            <label for="name-1" class="w-100">
-                                Name
-                            </label>
-                            <input id="name-1" type="text" class="form-control">
+                            <div class="form-group">
+                                <label for="name-1" class="w-100">
+                                    Name
+                                </label>
+                                <input id="name-1" required type="text" class="form-control">
+                            </div>
+
                         </div>
 
-                    </div>
+                        <div class="col-lg col-sm-6">
 
-                    <div class="col">
+                            <div class="form-group">
+                                <label for="surname-1" class="w-100">
+                                    Surname
+                                </label>
+                                <input id="surname-1" required type="text" class="form-control">
+                            </div>
 
-                        <div class="form-group">
-                            <label for="surname-1" class="w-100">
-                                Surname
-                            </label>
-                            <input id="surname-1" type="text" class="form-control">
                         </div>
 
-                    </div>
+                        <div class="col-lg">
 
-                    <div class="col">
+                            <div class="form-group">
+                                <label for="email-1" class="w-100">
+                                    Email
+                                </label>
+                                <input id="email-1" required type="email" class="form-control nmbottom">
+                            </div>
 
-                        <div class="form-group">
-                            <label for="email-1" class="w-100">
-                                Email
-                            </label>
-                            <input id="email-1" type="email" class="form-control">
                         </div>
 
-                    </div>
+                        <div class="col-lg">
+                            <label>
+                                &nbsp;
+                            </label>
+                            <a class="btn btn-block btn-outline-white btn-add-user-row btn-newsletter">
+                                Add Friend
+                            </a>
 
-                    <div class="col">
-                        <label>
-                            &nbsp;
-                        </label>
-                        <a onclick="" class="btn btn-block btn-outline-white">
-                            Add Friend
-                        </a>
-
+                        </div>
                     </div>
                 </div>
+
+                <div class="w-100"></div>
+
+                <div class="row mt-50">
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-md btn-white">
+                            Send
+                            <i class="ml-10 material-icons">
+                                arrow_right_alt
+                            </i>
+                        </button>
+                    </div>
+                </div>
+
             </form>
-
-            <div class="w-100"></div>
-
-            <div class="row mt-50">
-                <div class="col text-center">
-                    <a href="#" class="btn btn-md btn-white">
-                        Send
-                        <i class="ml-10 material-icons">
-                            arrow_right_alt
-                        </i>
-                    </a>
-                </div>
-            </div>
-
         </div>
     </section>
 
 </main>
 
-<footer id="js-footer" class="ie8-hide footer">
+<footer id="footer" class="ie8-hide footer">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-lg col-12">
                 <h4>
                     Our Recipes
                 </h4>
@@ -237,7 +493,7 @@
                 </p>
             </div>
 
-            <div class="col">
+            <div class="col-lg col-12">
                 <h4>
                     Grilled Prawn's History
                 </h4>
@@ -246,7 +502,7 @@
                 </p>
             </div>
 
-            <div class="col">
+            <div class="col-lg col-12">
                 <h4>
                     Tips and Tricks
                 </h4>
@@ -258,7 +514,7 @@
                 </p>
             </div>
 
-            <div class="col">
+            <div class="col-lg col-12">
                 <h4>
                     Help and Contact
                 </h4>
@@ -277,7 +533,7 @@
                 </p>
             </div>
 
-            <div class="col-4 copyright-container">
+            <div class="col-lg-4 copyright-container">
                 <p class="copyright">
                     <span class="d-block">&copy; The Grilled Prawn</span>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, lectus quis interdum
@@ -291,7 +547,7 @@
     </div>
 </footer>
 
-<script type="module" src="./dist/js/all.js"></script>
+<script src="./dist/js/main.bundle.js"></script>
 
 </body>
 </html>
