@@ -29,9 +29,8 @@ gulp.task('watch', function() {
 
   livereload.listen();
 
-  gulp.watch('assets/js/*.js', ['scripts']);
   gulp.watch('assets/img/**/*', ['image']);
   gulp.watch('assets/sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['scripts', 'sass', 'image', 'watch']);
+gulp.task('default', ['sass', 'image', 'watch']);

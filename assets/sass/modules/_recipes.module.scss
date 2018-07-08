@@ -2,22 +2,41 @@
   background-color: $lightGray;
   overflow: hidden;
   display: inline-block;
+  width: 100%;
 
   & > .form-group {
     font-size: 1rem;
     font-weight: bold;
     display: inline-block;
-    padding: 0 1rem 10px;
+    padding: 0 .5rem 10px;
     background-color: $lightGray;
     min-height: 46px;
     min-width: 270px;
+    width: 100%;
     text-align: left;
+    position: relative;
 
-    select {
-      min-width: 200px;
-      margin-left: 10px;
-      border: 1px $darkGray solid;
+    label {
+      position: absolute;
+      top: 50%;
+      transform: $centerY;
+      left: 0;
     }
+
+    .select-wrap {
+      position: absolute !important;
+      right: 0;
+      top: 50%;
+      transform: $centerY;
+
+      select {
+        position: relative;
+        min-width: 200px;
+        margin-left: 10px;
+        border: 1px $darkGray solid;
+      }
+    }
+
   }
 
   &.active {
@@ -54,7 +73,7 @@
 }
 
 .sort-by-container {
-  padding: 0;
+  //padding: 0;
 
   @media (max-width: 786px) {
     display: none;
@@ -99,7 +118,7 @@
   margin-top: -3px;
   margin-bottom: 30px;
   border-radius: 0 3px 3px 3px;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem;
   color: white;
 
   &.active {
@@ -174,11 +193,11 @@
     }
 
     @media (min-width: 992px) {
-    border-right: 1px solid $white;
+      border-right: 1px solid $white;
     }
 
     @media (min-width: 1200px) {
-    border-right: 1px solid $white;
+      border-right: 1px solid $white;
     }
   }
 }
